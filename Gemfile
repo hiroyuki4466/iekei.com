@@ -45,7 +45,6 @@ gem "net-smtp"
 gem 'dotenv-rails'
 gem 'google_places'
 gem 'geocoder'
-gem 'geokit-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
