@@ -25,13 +25,19 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHH73WeY-N5ysvBjmsHTtCAoa-mRRkcys&libraries=places&callback=initMap" async defer></script>
 <script type="text/javascript">
 var placesList;
+var pin = null;
 
 function initMap() {
-  new google.maps.Map(document.getElementById("mapArea"), {
-    zoom: 12,
+  var map = new google.maps.Map(document.getElementById("mapArea"), {
+    zoom: 14,
     center: new google.maps.LatLng(35.6809591,139.7673068),
     mapTypeId: google.maps.MapTypeId.ROADMAP
   });
+  pin = new google.maps.Marker({
+  position: new google.maps.LatLng(35.6809591,139.7673068),
+  map: map,
+  animation: google.maps.Animation.BOUNCE
+});
 }
   
 function getPlaces(){  
@@ -64,7 +70,7 @@ function startNearbySearch(latLng){
   var map = new google.maps.Map(
     document.getElementById("mapArea"),
     {
-      zoom: 12,
+      zoom: 14,
       center: latLng,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     }
@@ -171,7 +177,7 @@ function displayResults(results, status, pagination) {
 function createMarker(name, vicinity, lat, lng){
   
   var map = new google.maps.Map(document.getElementById("mapArea"), {
-    zoom: 15,
+    zoom: 14,
     center: new google.maps.LatLng(lat, lng),
     mapTypeId: google.maps.MapTypeId.ROADMAP
   });
