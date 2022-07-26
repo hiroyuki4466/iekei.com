@@ -28,7 +28,7 @@ var placesList;
 
 function initMap() {
   new google.maps.Map(document.getElementById("mapArea"), {
-    zoom: 10,
+    zoom: 12,
     center: new google.maps.LatLng(35.6809591,139.7673068),
     mapTypeId: google.maps.MapTypeId.ROADMAP
   });
@@ -64,7 +64,7 @@ function startNearbySearch(latLng){
   var map = new google.maps.Map(
     document.getElementById("mapArea"),
     {
-      zoom: 10,
+      zoom: 12,
       center: latLng,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     }
