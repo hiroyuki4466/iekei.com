@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.where(user_id: current_user.id).order(updated_at: 'DESC')
+    @posts = Post.where(user_id: current_user.id).order(shop_score: 'DESC')
   end
 
   def new
