@@ -1,0 +1,28 @@
+<div class = "searches_index_page">
+  <div class = "searches_index_title">
+    <%= image_tag "https://icooon-mono.com/i/icon_11647/icon_116471_64.png", class: "searches_index_logo" %>
+    <h2>麺バーのおすすめ店舗</h2>
+  </div>
+
+  <table class = "searches_index_table">
+    <thead class = "searches_index_thead">
+      <tr>
+        <th>画像</th>
+        <th>店名</th>
+        <th class = "searches_index_th">住所</th>
+        <th>ポイント</th>
+      </tr>
+    </thead>
+
+    <tbody class = "searches_index_tbody">
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= image_tag post.ramen_image, class: "searches_index_image" %></td>
+        <td><%= link_to post.shop_name, search_path(post), class: "searches_index_shop_name" %></td>
+        <td class = "searches_index_td"><%= post.address %></td>
+        <td class ="searches_index_shop_score"><%= post.shop_score %> 点</td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>

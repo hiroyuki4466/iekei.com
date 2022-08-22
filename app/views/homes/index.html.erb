@@ -12,7 +12,10 @@
         <%= image_tag "https://icooon-mono.com/i/icon_14142/icon_141421_64.png", class: "home_table_logo" %>家系を探す
       </div>
       <div>
-        <%= link_to "→地名から探す", maps_path, class: "home_table_search_link" %>
+        <%= link_to "→駅名・地名から", maps_path, class: "home_table_search_link" %>
+      </div>
+      <div>
+        <%= link_to "→麺バーのおすすめから", searches_path, class: "home_table_search_link" %>
       </div>
     </div>
   <% if user_signed_in? %>
@@ -22,6 +25,9 @@
       </div>
       <div>
         <%= link_to "→お気に入り店舗登録", new_post_path, class: "home_table_link" %>
+      </div>
+      <div>
+        <%= link_to "→お気に入り店舗一覧", posts_path, class: "home_table_link" %>
       </div>
     </div>
   <% else %>

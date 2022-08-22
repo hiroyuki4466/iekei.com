@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   
   resources :maps
   resources :posts
+  resources :searches
 
   resources :homes
     root to: "homes#index"

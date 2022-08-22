@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!, except: [:edit, :update, :destroy]
+
   def index
     @posts = Post.where(user_id: current_user.id).order(shop_score: 'DESC')
   end

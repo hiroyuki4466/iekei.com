@@ -1,0 +1,27 @@
+<div class = "post_show_page">
+  <div class = "post_show_image_container">
+    <%= image_tag @post.ramen_image, class: "post_show_image" %>
+  </div>
+
+  <div class = "post_show_nav">
+    <div class = "post_show_nav_list">
+      <p class = "post_show_shop_name"><%= @post.shop_name %></p>
+    </div>
+
+    <div class = "post_show_nav_list">
+    <p class = "post_show_shop_score"><%= @post.shop_score %> 点</p>
+    </div>
+
+    <div class = "post_show_nav_list">
+      <span>住所</span> <%= @post.address %>
+    </div>
+
+    <div class = "post_show_nav_list">
+      <span>メモ</span> <%= @post.shop_memo %>
+    </div>
+
+    <div class = "post_show_nav_list">
+      <%= link_to "麺バーのおすすめ店舗一覧へ戻る", searches_path %>
+    </div>
+  </div>
+</div>

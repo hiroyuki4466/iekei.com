@@ -12,7 +12,10 @@
         <th class = "post_index_th">住所</th>
         <th class = "post_index_th">最終来店日</th>
         <th>ポイント</th>
+      <% if current_user %>
         <th></th>
+        <th></th>
+      <% end %>
       </tr>
     </thead>
 
@@ -24,7 +27,10 @@
         <td class = "post_index_td"><%= post.address %></td>
         <td class = "post_index_td"><%= post.visited_date.to_s %></td>
         <td class ="post_index_shop_score"><%= post.shop_score %> 点</td>
+      <% if current_user %>
         <td><%= link_to "店舗情報編集", edit_post_path(post), class: "post_index_edit_link" %></td>
+        <td><%= link_to "削除", posts_path(post), method: :delete, data: { confirm: "本当に削除しますか？" }, class: "post_index_delete_button" %></td>
+      <% end %>
       </tr>
     <% end %>
     </tbody>
