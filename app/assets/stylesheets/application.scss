@@ -1334,7 +1334,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 300px;
+    height: 500px;
     display: block;
   }
 
@@ -1358,18 +1358,18 @@
   }
 
   .home_table_contaner {
-    display: flex;
+    display: block;
   }
 
   .home_table {
     border: 1px solid black;
     border-radius: 10px;
     background-color: #EEEEEE;
-    width: 48%;
-    height: 110px;
+    width: 80%;
+    height: 150px;
     padding: 10px 20px;
     text-align: center;
-    margin: auto;
+    margin: 10px auto;
   }
 
   .home_table_logo {
@@ -1379,19 +1379,19 @@
 
   .home_message {
     font-family: 'klee',sans-serif;
-    font-size: x-small;
+    font-size: medium;
   }
 
   .home_table_link {
     font-family: 'TsukuARdGothic-Regular',sans-serif;
-    font-size: 5px;
+    font-size: small;
     text-decoration: none;
     color: #FF69A3;
   }
 
   .home_table_search_link {
     font-family: 'TsukuARdGothic-Regular',sans-serif;
-    font-size: x-small;
+    font-size: small;
     text-decoration: none;
     color: #FF69A3;
     margin: auto;
@@ -1465,6 +1465,7 @@
 
   .sign_in_link {
     font-size: small;
+    padding: 5px 10px;
   }
 
   .sign_up_link {
@@ -1753,12 +1754,15 @@
     justify-content: center;
     align-items: center;
     font-family: 'klee',sans-serif;
+    font-size: large;
     text-align: center;
     margin-bottom: 20px;
   }
 
   .searches_index_logo {
     margin-right: 10px;
+    width: 40px;
+    height: 40px;
   }
 
   .searches_index_table {

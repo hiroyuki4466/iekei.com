@@ -46,7 +46,7 @@
           </li>
           <li class="header_menu">
             <%= link_to image_tag("https://icooon-mono.com/i/icon_14679/icon_146791_64.png", class: "header_menu_logo"), destroy_user_session_path %>
-            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header_menu_link" %>
+            <%= link_to "ログアウト", destroy_user_session_path, class: "header_menu_link" %>
           </li>
         </ul>
         <div class="header_sp_right_nav_container">
@@ -72,7 +72,7 @@
               </li>
               <li>
                 <a href="#">
-                <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header_menu_link" %>
+                <%= link_to "ログアウト", destroy_user_session_path, class: "header_menu_link" %>
                 </a>
               </li>
               <li class="close"><span>閉じる</span></li>
