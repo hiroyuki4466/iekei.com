@@ -22,7 +22,7 @@
   <div id="mapArea"></div>
   <div id="results"></div>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHH73WeY-N5ysvBjmsHTtCAoa-mRRkcys&libraries=places&callback=initMap" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=#{ENV['API_KEY']}&libraries=places&callback=initMap" async defer></script>
 <script type="text/javascript">
 var placesList;
 var pin = null;
@@ -185,6 +185,7 @@ function createMarker(name, vicinity, lat, lng){
   var marker = new google.maps.Marker({
     map: map,
     position: new google.maps.LatLng(lat, lng)
+    animation: google.maps.Animation.BOUNCE
   });
   
   var info = "<div style=\"min-width: 100px\">";
