@@ -28,6 +28,7 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'devise'
+gem 'ransack'
 
 # css
 gem 'jquery-rails'
@@ -52,6 +53,7 @@ group :development, :test do
   gem 'sqlite3'
   gem 'pry-rails'
   gem 'rspec-rails'
+  gem 'spring-commands-rspec'
 end
 
 group :production do
